@@ -1,3 +1,5 @@
 
 export const API_KEY = 'fe680a07763a6a93a2fadba50fb8c8cf';
 export const HEADERS = {'Content-Type': 'application/json' };
+export const SEARCH_LABEL = 'Selecciona una capital del mundo';
+export const CITY_SELECT = ['Buenos Aires', 'London', 'Miami', 'Caracas', 'Madrid'];
