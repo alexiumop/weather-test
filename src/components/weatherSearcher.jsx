@@ -14,7 +14,7 @@ const WeatherSearcher = ({handleSelect}) => {
     }
 
     return (
-        <Navbar className="bg-body-tertiary justify-content-between">
+        <Navbar className="justify-content-between">
             <Form onSubmit={(e) => handleSubmit(e)}>
                 <Row>
                     <Col xs="auto">

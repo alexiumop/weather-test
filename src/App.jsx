@@ -18,7 +18,7 @@ const App = () => {
         /*La linea a continuación es encargada de leer y despachar la respuesta al store.*/
         currentLocationWeather.then(res => dispatch(getCurrentLocationWeather(res.response)));
          /* Obtengo multiples reportes del clima del otro endpoint y envio al almacen */
-         const newforecastWeather = httpClient.getForecastWeather('Buenps Aires');
+         const newforecastWeather = httpClient.getForecastWeather('Buenos Aires');
          newforecastWeather.then(res => dispatch(getMultipleWeather(res.response)));
     }, []);
 
