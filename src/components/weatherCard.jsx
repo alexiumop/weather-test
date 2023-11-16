@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 const WeatherCard = () => {
-    const uniqueCurrentLocationCard = useSelector(state => state.currentWeather);
-    
+    const uniqueCurrentLocationData = useSelector(state => state.currentWeather);
+    const multipleWeatherData = useSelector(state => state.forecastWeather);
   return (
     <Card>
       <Card.Img variant="top" />

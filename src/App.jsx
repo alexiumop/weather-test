@@ -17,6 +17,9 @@ const App = () => {
         const currentLocationWeather = httpClient.getActualWeatherByCityName('Buenos Aires');
         /*La linea a continuación es encargada de leer y despachar la respuesta al store.*/
         currentLocationWeather.then(res => dispatch(getCurrentLocationWeather(res.response)));
+         /* Obtengo multiples reportes del clima del otro endpoint y envio al almacen */
+         const newforecastWeather = httpClient.getForecastWeather('Buenps Aires');
+         newforecastWeather.then(res => dispatch(getMultipleWeather(res.response)));
     }, []);
 
     /*Función manejadora para el seleccionador de ciudades, siguiendo la estructura HOC.*/
@@ -24,9 +27,8 @@ const App = () => {
         /*Al seleccionar una nueva ciudad primero obtengo de vuelta el current weather y actualizo el store*/
         const newCurrentLocationWeather = httpClient.getActualWeatherByCityName(cityName);
         newCurrentLocationWeather.then(res => dispatch(getCurrentLocationWeather(res.response)));
-        /* Obtengo multiples reportes del clima del otro endpoint y envio al almacen */
-        const forecastWeather = httpClient.getForecastWeather(cityName);
-        forecastWeather.then(res => dispatch(getMultipleWeather(res.response)));
+        const newforecastWeather = httpClient.getForecastWeather(cityName);
+        newforecastWeather.then(res => dispatch(getMultipleWeather(res.response)));
     } 
     
   return (
