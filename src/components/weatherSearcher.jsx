@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Navbar, Form, Row, Button } from 'react-bootstrap';
-import { SEARCH_LABEL, CITY_SELECT } from '../constants';
+import { SEARCH_LABEL, CITY_SELECT, SEARCH_TITLE } from '../constants';
 
 const WeatherSearcher = ({handleSelect}) => {
 
@@ -19,7 +19,7 @@ const WeatherSearcher = ({handleSelect}) => {
                 <Row>
                     <Col xs="auto">
                         <Form.Group>
-                            <Form.Label>{SEARCH_LABEL}</Form.Label>
+                            <Form.Label>{SEARCH_TITLE}</Form.Label>
                             <Form.Select name='cities'>
                                 <option>{SEARCH_LABEL}</option>
                                 {CITIES_OPTIONS}

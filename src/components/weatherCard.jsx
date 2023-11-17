@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, Col} from 'react-bootstrap';
 import { TEMP, TEMP_MAX_MIN, FEELS_LIKE, HUMIDITY, CLOUDS, WIND, WEATHER } from '../constants';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
+import MultipleListWeather from './multipleListWeather';
 
 const WeatherCard = () => {
     const uniqueCurrentLocationData = useSelector(state => state.currentWeather);
@@ -57,12 +58,12 @@ const WeatherCard = () => {
         <Card>
             <Card.Img variant="top"/>
             <Card.Body>
-                <Card.Title>{name}</Card.Title>
+                <Card.Title>Clima Actual sobre la ciudad de {name}</Card.Title>
                 <Card.Text>
-                    <Col xs={12}>
-                        <h3>Clima Actual sobre la ciudad de {name}</h3>
-                    </Col>
                     {currentInfoWeather}
+                    <hr />
+                    <h3>Clima estimado a 5 dias cada 3 horas sobre la ciudad de {name}</h3>
+                    <MultipleListWeather />
                 </Card.Text>
             </Card.Body>
         </Card>

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import initialStateWeather from '../initialStatesJson/actualWeather.json'
+import initialStateWeather from '../initialStatesJson/multipleWeather.json'
 
 const initialState = initialStateWeather;
 
